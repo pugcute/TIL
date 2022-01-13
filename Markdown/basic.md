@@ -85,6 +85,8 @@ def my_hello()
 
 이미지는 윈도우 쉬프트 s
 
+![image-20220113160222258](basic.assets/image-20220113160222258.png)
+
 
 이미지를 markdown을 가지고 있는게 아님. basic asset 어쩌구저쩌구에 있음,  같이 보낼 설정도 보내야 됨. 이미지도 같이 보내야 됨.따라서 basic asset 제목을 바꾸면 안됨
 
