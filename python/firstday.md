@@ -48,3 +48,29 @@ coun
 print(count_list1)
   
 ``` 
+
+- 백준 1769 3의 배수
+  
+  ```python
+  x = input()
+  sum1 = 0
+  cnt = 0 
+  while True:
+    sum1 = 0
+    for i in x :
+      sum1 = int(i)+sum1 
+    if len(x) == 1:
+      break
+    else:   
+      if len(x) > 1 and sum1 < 10 :
+        cnt = cnt+1
+        break
+      else :
+        x = str(sum1)
+        cnt = cnt + 1
+  print(cnt)
+  if sum1 % 3 == 0:
+    print("YES")
+  else :
+    print("NO")
+  ```
