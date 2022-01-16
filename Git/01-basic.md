@@ -57,7 +57,30 @@ add로 변경사항 목록에 올린 변경사항을 실제로 저장하는 것�
     commit으로 저장한 파일들의 정보를 출력
 
 ## 6, README, .gitignore
-1. README : 깃헙의 대문으로 repo 디렉터리의 최상단에 위치한다. 설정시 github의 README가 활성화됨
-2. .gitignore : 특정 파일의 변경사항을 영구적으로 add할 수 없도록 설정하는 파일.
-단, 대상 파일의 파일명이 .gitignore에 있어야만 작동하며, 소급해서 적용되지 않으니 주의 필요.
- 
+1. README 
+    
+    깃헙의 대문으로 repo 디렉터리의 최상단에 위치한다. 설정시 github의 README가 활성화됨
+2. .gitignore 
+    
+    특정 파일의 변경사항을 영구적으로 add할 수 없도록 설정하는 파일.
+    단, 대상 파일의 파일명이 .gitignore에 있어야만 작동하며, 소급해서 적용되지 않으니 주의 필요.
+
+## 6, Clone, Pull (Remote -> Local)
+
+1. `git clone remote repo의 url 주소.git (이름명)`
+   
+   remote repo를 최초 복제할 때 사용, 그 이후는 모두 pull을 통해 진향
+
+   이름명이 없을 시에는 remote repo의 이름이 자동적으로 할당. 
+
+2. `git pull origin master`
+    
+    remote repo의 저장되어 있는 것을 local repo로 가져옴. 
+
+### 주의사항
+
+1. github애서 가급적이면 하지 말자. pull, push가 잘못 되면 동기화가 안되는 상황인 '**충돌**'이 발생함.
+2. push를 함부로 하지 말 것, 
+    
+
+    
