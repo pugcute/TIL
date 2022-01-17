@@ -74,3 +74,89 @@ print(count_list1)
   else :
     print("NO")
   ```
+
+- 백준 1181 단어정렬
+
+    내가 한 풀이
+```python
+import sys
+n = int(input())
+list1 = [] 
+for i in range(n) :
+  list1.append(sys.stdin.readline().strip())
+list1.sort()
+for i in range (len(list1)):
+  for j in range(0, n - i - 1):
+    if len(list1[j]) > len(list1[j+1]) :
+      list1[j], list1[j+1] = list1[j+1], list1[j]
+
+for i in range(len(list1)) :
+  print(list1[i])
+```
+이는 런타임에러가 발생, 다른 정렬 방법도 그러므로, lamada로 해결하겠음
+
+```python
+import sys
+
+n = int(sys.stdin.readline())
+words = [sys.stdin.readline().strip() for i in range(n)]
+
+def solution(words):
+    result = list(set(words))
+    result.sort(key = lambda word : (len(word), word))
+    return result
+# result.sort에 따라 word글자 수에 따라 정렬되면서, sort에 의해 사전정렬이 가능하다. 그렇다면 내 코드를 수정하겠다. 
+#또한 내코드는 중복되는 요소 삭제를 하지 않았음. 그 결과 시간복잡도가 더욱 증가했음,. .
+result = solution(words)
+for answer in result:
+    print(answer)
+```
+
+- 백준 1075번 나누기
+```python
+import sys
+
+n = input()
+f = int(sys.stdin.readline())
+
+temp = int(n[:-2] + '00')
+while True :
+  if temp % f == 0 :
+    break
+  temp += 1 
+print(str(temp)[-2 : ])  
+```
+
+  문자열로 n을 입력한 후, 마지막 두 자리를 슬라이싱한 후 00으로 바꿈.
+  이후 f로 나눠질 때까지 i 값을 눌려나감. 
+  그리고 마지막 두번째 자리와 첫번째 자리를 슬라이싱으로 출력
+
+- 백준 1264번 모음의 갯수
+  ```python
+  list1 = ['a', 'e', 'i', 'o', 'u']
+  while True:
+    text = input().lower()
+    if text == '#':
+      break
+    cnt = 0
+    f or c in text:
+      if c in list1:
+        cnt = cnt + 1
+  print(cnt)
+  ```
+
+- 백준 2775번 부녀회장이 될꺼야
+  ```python 
+  T = int(input())
+
+  for i in range(T):  
+    F = int(input()) 
+    N = int(input()) 
+    list1 = [x for x in range(1, N+1)] 
+    for k in range(F): 
+        for i in range(1, N):  
+            list1[i] += list1[i-1]  
+    print(list1[-1]) 
+ ``` 
+  
+
