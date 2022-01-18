@@ -157,6 +157,59 @@ print(str(temp)[-2 : ])
         for i in range(1, N):  
             list1[i] += list1[i-1]  
     print(list1[-1]) 
- ``` 
   
+  
+
+- 백준 2747 피보나치수
+```python
+import sys
+def fibo(x):
+    if x == 0 :
+        return 0
+    elif x == 1 :
+        return 1
+    else :
+        return fibo(x-1)+fibo(x-2)
+
+n = int(sys.stdin.readline())
+print(fibo(n))
+#제귀로 짜다보니 시간 초과 발생
+
+def fibo(x):
+    result = [0 for i in range(x + 1)]
+    result[0] = 0
+    result[1] = 1
+
+    for i in range(2, n + 1):
+        result[i] = result[i - 1] + result[i - 2]
+    return result[x]
+
+
+n = int(sys.stdin.readline())
+
+print(fibo(n))
+#0 부터 x까지의 리스트를 만든 후에 fibo(0)과 fibo(1)을 정의, 그 후 리스트 fibo(2)이후의 원소를 조작
+```
+
+- 2702 초6수학
+
+```python
+# 걍 유클리드 호제법을 사용하자
+def gcd(a, b):
+    if a == 0 :
+        return b
+    else:
+        return gcd(b % a, a)
+
+def lvm(a, b):
+    return (a*b) // gcd(a, b)
+
+N = int(input())
+for i in range(N) : 
+    a, b = map(int, input().split())
+    print(lvm(a, b), gcd(a, b))
+```
+유클리드 호제법 gcd(a, b) = gcd(b, r) 이때 자리 바뀔 수 있음.
+
+
 
