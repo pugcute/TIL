@@ -212,4 +212,20 @@ for i in range(N) :
 유클리드 호제법 gcd(a, b) = gcd(b, r) 이때 자리 바뀔 수 있음.
 
 
+- 5543 상근월드
+
+```python
+list1 =[]
+list2 = []
+for i in range(3):
+  a = int(input())
+  list1.append(a)
+for i in range(2):
+  b = int(input())
+  list2.append(b)
+print(min(list1) + min(list2)-50)
+```
+
+
+
 
