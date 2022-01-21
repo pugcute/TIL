@@ -226,42 +226,14 @@ for i in range(2):
 print(min(list1) + min(list2)-50)
 ```
 
-- 백준 1920 수 찾기
+-백준 달팽이
+```import math
 
-```python
-#첫째 줄에 자연수 N(1 ≤ N ≤ 100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1 ≤ M ≤ 100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.
-
-import sys
-N = int(sys.stdin.readline())
-list1 = set(map(int, sys.stdin.readline().split()))
-
-m = int(sys.stdin.readline())
-list2 = list(map(int, sys.stdin.readline().split()))
-for j in list2:
-  if j in list1:
-    print(1)
-  else:
-    print(0)
+a, b, v = map(int, input().split())
 
 
-#런타임 에러가 나옴.
-#리스트의 시간 복잡도는 n이지만 set은 1 그차이가 런타임에러를 부름 
+day = math.ceil((v-a)/(a-b)) + 1
+print(day)
 ```
-
-- 11050 이항계수
-```python
-def factor(n):
-  if n == 1 or n == 0:
-    return 1
-  elif n > 1:
-    return n * factor(n-1)
-
-n, k = map(int, input().split())
-xk = factor(n)/(factor(k)*factor(n-k))
-print(int(xk))
-```
-
-시간 복잡도 고려안하는 문제이었음.
-
 
 
