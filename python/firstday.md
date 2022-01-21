@@ -227,11 +227,9 @@ print(min(list1) + min(list2)-50)
 ```
 
 -백준 달팽이
-```import math
-
+```python
+import math
 a, b, v = map(int, input().split())
-
-
 day = math.ceil((v-a)/(a-b)) + 1
 print(day)
 ```
