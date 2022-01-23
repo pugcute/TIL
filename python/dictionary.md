@@ -39,7 +39,31 @@ abs(num1 - num2) <= sys.float_info.epsilon
   
   ```
   
-  
+- 딕셔너리 정리
 
+  - {key1: value1, key2:value2}`
 
+  - `dict1.keys()` 키를 리스트 형식으로 출력
 
+  - `dict1.values()` 값을 리스트 형식으로 출력
+
+  - `dict1.items()` 키와 값을 하나의 튜플로 하여 리스트로 출력
+
+  - `dict1['key']` 의 결과는 그 키의 **value** 
+
+  - 새로운 딕셔너리 만들기
+
+    ```python
+    key_list = ['name', 'age', 'school']
+    students_dict = {}
+    for key in key_list:
+        students_dict[key] = students[key]
+     
+    ```
+
+- 파일 저장
+
+```python
+students_data = open("data/students/"+str(students['id'])+".json", encoding='UTF8') 
+    students_data_list = json.load(students_data) 
+```
