@@ -17,7 +17,7 @@ for i in range(N) :
     b_gcd = b // gcd
     gol = gcd * a_gcd * b_gcd
     list1 = []
-'''
+
 # 걍 유클리드 호제법을 사용하자
 def gcd(a, b):
     if a == 0 :
@@ -32,4 +32,4 @@ N = int(input())
 for i in range(N) : 
     a, b = map(int, input().split())
     print(lvm(a, b), gcd(a, b))
-   
+'''
