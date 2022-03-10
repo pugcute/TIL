@@ -1,4 +1,4 @@
-# 0207 computer structure_Performance
+# 0219 computer structure_Performance
 
 
 ## 개론
@@ -40,19 +40,40 @@
 ## Performance 
 
 - **response time(응답시간)** 하나의 일을 실행하는데 몇 초 걸리는가?
-
 - **throughput(처리량)**  단위 시간당 몇 개의 일을 하는가?
-
 - 이때 퍼포먼스를 response time이라고 정의할 경우, Performance = 1/실행 시간
-
 - **elapsed time 작업을 끝내는 데 필요한 전체 응답 시간(system performanc)**
-
 - **cpu time 오직 cpu에서만 걸리는 시간  -  user cpu time,  system cpu time**
+- 순차 회로는 일정한 클럭에 따라 동작, 이 주기를 클럭 주기며 pico second로 단위로 나타내며(1ps = 0.01ns ) cpu의 초당 클럭 사이클 수를 클럭 속도라고 한다.
+- 따라서 **cpu time**은 **clock cycles/clock rate** 또는 **clock cycles * clock time **로 나타낼 수 있다. 
+- 즉 클럭 주기를 줄이거나 **clock period(clock rate = 1/clock perid)**를 줄이거나 하면 cpu time은 줄어들음
+- **clock cycles = instruction count(프로그램, isa, 컴파일러로 의해 결정됨) * cycles per instruction(다른 명령어들은 다른 cpi를 쓰며(명령어 조합에 의해 결정됨), cpu 하드웨어에 따라 결정**
+-  알고리즘, 프로그래밍 언어, 컴파일러는 instruction count와 cpi에 연관/ 아키텍쳐는 모두 영향(clock period까지)
 
--  순차 회로는 일정한 클럭에 따라 동작, 이 주기를 클럭 주기며 pico second로 단위로 나타내며(1ps = 0.01ns ) cpu의 초당 클럭 사이클 수를 클럭 속도라고 한다.
 
-- 따라서 **cpu time**은 **클럭 주기/ 클럭 속도**로 나타낼 수 있다. 
- 
+
+## power wall
+
+
+
+- power = **capactive load  * (전력소비량 * * 2) * clock frequency)**
+
+- 전력 소비량을 이제 맞출 수 없으므로, 더 높은 전력 또는 빈번한 frequency을 사용할 시 열이 엄청 많이 남.
+- 파워가 성능향상에 장애물이 됨
+
+
+
+## Multicore microprocessor
+
+
+
+- parrel programing 여러 개의 명령어를 동시에 하는 것을 의미,  단 순차조합회로에 비해 굉장히 짜기 어려움, 
+- 명령끼리의 속도가 달라서 로드 밸런싱이나 명령어끼리의 대화가 늦어질 수 있음
+
+
+
+
+
 
 ## CPU(중앙 처리 장치)
 
