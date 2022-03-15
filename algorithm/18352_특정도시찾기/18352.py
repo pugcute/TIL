@@ -3,7 +3,7 @@ from collections import deque
 sys.stdin = open('input.txt')
 # 이럴줄알았다. 다익스트라구만.....하아... 이러니 리스트로 안되지
 # 단방향?????
-# 제출코드는 무조건 sys.stdin.readline 쓸 것!....
+# 제출코드는 무조건 sys.stdin.readline 쓸 것!.... 하아 입력 가지고 20분 날렸네....
 
 V, E, distance, start = map(int, input().split())
 graph = [[] for _ in range(V+1)]
